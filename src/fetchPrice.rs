@@ -28,6 +28,7 @@ async fn parse_eth_usdt_price(response: Response) -> Result<f64, Box<dyn std::er
 }
 
 
+
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     dotenv().ok();
@@ -49,6 +50,6 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
             Ok(price) => println!("ETH/USDT Price: {}", price),
             Err(e) => eprintln!("Error: {}", e),
         }
-        tokio::time::sleep(Duration::from_secs(5)).await;
+        tokio::time::sleep(Duration::from_secs(1)).await;
     }
 }

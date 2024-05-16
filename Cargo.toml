@@ -12,4 +12,17 @@ dotenv = "0.15.0"
 tokio = { version = "1", features = ["full", "rt-multi-thread", "macros"] }
 log = "0.4.21"
 env_logger = "0.11.3"
+chrono = "0.4.38"
+ecdsa = "0.16.9"
+hex-literal = "0.3"
+generic-array = "0.14"
+typenum = "1.14"
+simple_logger = "1.13"
 
+
+[[bin]]
+name = "tx"
+path = "src/tx.rs"
+[[bin]]
+name = "price"
+path = "src/fetchPrice.rs"
